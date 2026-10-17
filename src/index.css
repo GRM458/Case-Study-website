@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap');
+@import "tailwindcss";
+
+@theme {
+	--font-sans: 'DM Sans', sans-serif;
+	--font-display: 'DM Serif Display', Georgia, serif;
+	--color-paper: #0b0e17;
+	--color-ink: #f4f6fc;
+	--color-coral: #35c4f4;
+	--color-muted: #95a1b6;
+	--color-copy: #a8b2c5;
+	--color-green: #131a29;
+	--color-lime: #a958f5;
+	--color-soft-green: #172235;
+	--color-dark-paper: #111725;
+	--color-surface: #0e1320;
+	--color-line: #242c3c;
+	--color-violet: #a958f5;
+	--color-cyan: #35c4f4;
+}
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		margin: 0;
+		min-width: 320px;
+		font-family: var(--font-sans);
+	}
+
+	button,
+	a {
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	a:focus-visible,
+	button:focus-visible {
+		outline: 2px solid var(--color-cyan);
+		outline-offset: 4px;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+	}
+}
