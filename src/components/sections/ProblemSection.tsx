@@ -1,5 +1,5 @@
 import { SectionEyebrow } from "../ui/SectionEyebrow";
-import {useState} from "react";
+import { useState } from "react";
 
 export function ProblemSection() {
   const provides = [
@@ -52,9 +52,9 @@ export function ProblemSection() {
         </div>
       </div>
 
-      <div className="mt-12 grid gap-px border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-5 xl:grid-cols-4">
         {provides.map((item, index) => (
-          <ProblemCard key={index} item={item} index={index} />
+          <ProblemCard key={item.title} item={item} index={index} />
         ))}
       </div>
     </section>
@@ -63,16 +63,66 @@ export function ProblemSection() {
 
 
 
-function ProblemCard({ item, index }: { item: { title: string; para: string }; index: number }) {
-  const [isOpen,setIsOpen]=useState(false);
+function ProblemCard({
+  item,
+  index,
+}: {
+  item: { title: string; para: string };
+  index: number;
+}) {
+  const [isPinnedOpen, setIsPinnedOpen] = useState(false);
+
+  const detailsId = `problem-card-details-${index}`;
+
   return (
-    <div className="flex flex-col bg-[var(--color-paper)] relative z-10">
-            <div className="flex min-h-24 items-center gap-4 bg-paper px-5 cursor-pointer" key={item.title} onMouseEnter={()=>setIsOpen(true)} onMouseLeave={()=>setIsOpen(false)}>
-            <span className="font-mono text-xs text-cyan">0{index + 1}</span>
-            <span className="text-sm font-medium text-ink">{item.title}</span>
-          </div>
-        {isOpen && <p className="text-md text-ink gap-4 bg-paper px-5 rounded-sm absolute z-10 shadow-lg top-26 border p-5 border-white/10 shadow-sm shadow-gray-500">{item.para}</p>}
+
+
+
+
+    <div
+      className={`group relative ${
+        isPinnedOpen ? "z-20" : "z-0 hover:z-20 focus-within:z-20 cursor-pointer"
+      }`}
+    >
+
+
+
+      <button
+        type="button"
+        aria-expanded={isPinnedOpen}
+        aria-controls={detailsId}
+        // onClick={() => setIsPinnedOpen((open) => !open)}
+        className={`rounded-xl flex min-h-20 w-full cursor-pointer flex-col items-start justify-center border bg-white/[.02] p-3 text-left transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan sm:p-4 ${
+          isPinnedOpen
+            ? "border-cyan/40 bg-white/[.04]"
+            : "border-white/10 hover:border-cyan/40 hover:bg-white/[.04]"
+        }`}
+      >
+        <span className="font-mono text-xs text-cyan">0{index + 1}</span>
+        <span className="mt-2 text-base font-semibold text-ink sm:text-lg">
+          {item.title}
+        </span>
+      </button>
+
+
+      {/* Droup info */}
+      <div
+        id={detailsId}
+        className={`rounded-2xl invisible absolute left-0 top-[calc(100%+0.5rem)] z-30 w-full translate-y-1 border border-white/10 bg-[#111725] p-3 text-sm leading-5 text-copy opacity-0 shadow-xl transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100 sm:p-4 ${
+          isPinnedOpen ? "visible translate-y-0 opacity-100" : ""
+        }`}
+      >
+        <p className="mb-1 font-mono text-[10px] text-cyan">
+          0{index + 1} / {item.title}
+        </p>
+        <p>{item.para}</p>
+      </div>
+
+
+
     </div>
+
+
 
   );
 }

@@ -28,6 +28,9 @@ export function AudienceSection() {
           </p>
         </div>
 
+
+{/* Audience tabs Right side */}
+
         <div>
           <div
             className="flex flex-wrap gap-2"
@@ -36,7 +39,7 @@ export function AudienceSection() {
           >
             {audiences.map((audience, index) => (
               <button
-                className={`min-h-10 border px-4 text-xs font-semibold transition-colors cursor-pointer ${activeAudience === index ? "border-cyan bg-cyan/10 text-cyan" : "border-white/10 bg-[#0e1220] text-copy hover:border-white/30"}`}
+                className={`rounded-xl min-h-10 border px-4 text-xs font-semibold transition-colors cursor-pointer ${activeAudience === index ? "border-cyan bg-cyan/10 text-cyan" : "border-white/10 bg-[#0e1220] text-copy hover:border-white/30"}`}
                 id={`audience-tab-${index}`}
                 key={audience.name}
                 type="button"
