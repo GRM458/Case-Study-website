@@ -1,5 +1,4 @@
 import { SectionEyebrow } from "../ui/SectionEyebrow";
-import { useState } from "react";
 
 export function ProblemSection() {
   const provides = [
@@ -70,33 +69,14 @@ function ProblemCard({
   item: { title: string; para: string };
   index: number;
 }) {
-  const [isPinnedOpen, setIsPinnedOpen] = useState(false);
-
   const detailsId = `problem-card-details-${index}`;
 
   return (
-
-
-
-
-    <div
-      className={`group relative ${
-        isPinnedOpen ? "z-20" : "z-0 hover:z-20 focus-within:z-20 cursor-pointer"
-      }`}
-    >
-
-
-
+    <div className="group relative z-0 hover:z-20 focus-within:z-20">
       <button
         type="button"
-        aria-expanded={isPinnedOpen}
-        aria-controls={detailsId}
-        // onClick={() => setIsPinnedOpen((open) => !open)}
-        className={`rounded-xl flex min-h-20 w-full cursor-pointer flex-col items-start justify-center border bg-white/[.02] p-3 text-left transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan sm:p-4 ${
-          isPinnedOpen
-            ? "border-cyan/40 bg-white/[.04]"
-            : "border-white/10 hover:border-cyan/40 hover:bg-white/[.04]"
-        }`}
+        aria-describedby={detailsId}
+        className="flex min-h-20 w-full cursor-pointer flex-col items-start justify-center rounded-xl border border-white/10 bg-white/[.02] p-3 text-left transition-colors hover:border-cyan/40 hover:bg-white/[.04] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan sm:p-4"
       >
         <span className="font-mono text-xs text-cyan">0{index + 1}</span>
         <span className="mt-2 text-base font-semibold text-ink sm:text-lg">
@@ -104,25 +84,15 @@ function ProblemCard({
         </span>
       </button>
 
-
-      {/* Droup info */}
       <div
         id={detailsId}
-        className={`rounded-2xl invisible absolute left-0 top-[calc(100%+0.5rem)] z-30 w-full translate-y-1 border border-white/10 bg-[#111725] p-3 text-sm leading-5 text-copy opacity-0 shadow-xl transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100 sm:p-4 ${
-          isPinnedOpen ? "visible translate-y-0 opacity-100" : ""
-        }`}
+        className="invisible absolute left-0 top-[calc(100%+0.5rem)] z-30 w-full translate-y-1 rounded-2xl border border-white/10 bg-[#111725] p-3 text-sm leading-5 text-copy opacity-0 shadow-xl transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100 sm:p-4"
       >
         <p className="mb-1 font-mono text-[10px] text-cyan">
           0{index + 1} / {item.title}
         </p>
         <p>{item.para}</p>
       </div>
-
-
-
     </div>
-
-
-
   );
 }
