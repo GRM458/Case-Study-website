@@ -14,7 +14,7 @@ export function FeaturesSection() {
     >
       <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
         <div>
-          <SectionEyebrow number="04" label="Key features" inverted />
+          {/* <SectionEyebrow number="04" label="Key features" inverted /> */}
           <h2
             id="feature-heading"
             className="mt-8 font-sans text-4xl font-bold leading-[1.05] md:text-5xl lg:text-6xl"

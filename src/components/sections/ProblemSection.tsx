@@ -26,7 +26,7 @@ export function ProblemSection() {
       id="problem"
       aria-labelledby="problem-heading"
     >
-      <SectionEyebrow number="02" label="Problem statement" />
+      {/* <SectionEyebrow number="02" label="Problem statement" /> */}
 
       <div className="mt-9 grid gap-8 lg:grid-cols-[.7fr_1.3fr] lg:gap-20">
         <h2

@@ -8,7 +8,7 @@ export function StatusSection() {
       id="status"
       aria-labelledby="status-heading"
     >
-      <SectionEyebrow number="06" label="Current status & marketing focus" />
+      {/* <SectionEyebrow number="06" label="Current status & marketing focus" /> */}
 
       <div className="mt-9 grid gap-10 lg:grid-cols-[.85fr_1.15fr] lg:gap-20">
         <div>

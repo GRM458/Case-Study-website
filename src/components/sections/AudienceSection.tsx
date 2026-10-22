@@ -12,7 +12,7 @@ export function AudienceSection() {
       id="audience"
       aria-labelledby="audience-heading"
     >
-      <SectionEyebrow number="05" label="Target audience" />
+      {/* <SectionEyebrow number="05" label="Target audience" /> */}
       <div className="mt-8 grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:gap-20">
         <div>
           <h2
