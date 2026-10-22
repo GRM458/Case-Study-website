@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { features, productName } from "../../config/site";
-import { SectionEyebrow } from "../ui/SectionEyebrow";
 
 export function FeaturesSection() {
   const [activeFeature, setActiveFeature] = useState(0);
@@ -8,7 +7,7 @@ export function FeaturesSection() {
 
   return (
     <section
-      className="bg-ink px-6 py-20 text-paper md:px-12 md:py-28 lg:px-[12vw] lg:py-32"
+      className="bg-paper px-6 py-20 text-ink md:px-12 md:py-28 lg:px-[12vw] lg:py-32"
       id="features"
       aria-labelledby="feature-heading"
     >
@@ -17,28 +16,28 @@ export function FeaturesSection() {
           {/* <SectionEyebrow number="04" label="Key features" inverted /> */}
           <h2
             id="feature-heading"
-            className="mt-8 font-sans text-4xl font-bold leading-[1.05] md:text-5xl lg:text-6xl"
+            className="section-title mt-8"
           >
             School activities,
             <br />
             <span className="text-cyan">organized in one place.</span>
           </h2>
         </div>
-        <p className="max-w-85 pb-1 text-sm leading-7 text-paper/65">
+        <p className="section-copy max-w-85 pb-1 text-copy">
           The platform’s key features support attendance, study planning,
           classroom updates, assessment review, and school-parent communication.
         </p>
       </div>
-      <div className="mt-14 grid border-t border-white/20 lg:grid-cols-[.72fr_1.28fr]">
+      <div className="mt-14 grid border-t border-line lg:grid-cols-[.72fr_1.28fr]">
         <div
-          className="flex flex-col border-b border-white/20 py-3 lg:border-b-0 lg:border-r lg:py-6"
+          className="flex flex-col border-b border-line py-3 lg:border-b-0 lg:border-r lg:py-6"
           role="tablist"
           aria-label="Platform features"
           aria-orientation="vertical"
         >
           {features.map((feature, index) => (
             <button
-              className={`cursor-pointer group flex min-h-16.25 items-center gap-4 border-b border-white/15 px-2 text-left text-sm transition-colors hover:text-lime ${activeFeature === index ? "text-lime" : "text-paper/70"}`}
+              className={`group flex min-h-16.25 cursor-pointer items-center gap-4 rounded-lg border-b px-3 text-left text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan ${activeFeature === index ? "border-cyan/30 bg-cyan/10 text-cyan" : "border-line text-copy hover:border-cyan/30 hover:bg-white/5 hover:text-cyan"}`}
               id={`feature-tab-${index}`}
               key={feature.number}
               type="button"
@@ -47,12 +46,12 @@ export function FeaturesSection() {
               aria-controls="feature-panel"
               onClick={() => setActiveFeature(index)}
             >
-              <span className="w-7 text-[10px] text-paper/40">
+              <span className="w-7 text-[10px] text-muted">
                 {feature.number}
               </span>
               <span className="flex-1">{feature.shortTitle}</span>
               <span
-                className={`transition-transform group-hover:translate-x-1 ${activeFeature === index ? "opacity-100" : "opacity-0"}`}
+                className={`text-cyan transition-transform group-hover:translate-x-1 ${activeFeature === index ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}
                 aria-hidden="true"
               >
                 ↗
@@ -73,18 +72,18 @@ export function FeaturesSection() {
             <h3 className="mt-5 font-sans text-3xl font-semibold leading-tight md:text-4xl">
               {selectedFeature.shortTitle}
             </h3>
-            <p className="mt-4 text-sm leading-7 text-paper/65">
+            <p className="mt-4 text-sm leading-7 text-copy">
               {selectedFeature.description}
             </p>
             <a
-              className="mt-auto inline-flex items-center gap-4 border-b border-violet pb-1 pt-7 text-xs font-semibold text-violet"
+              className="mt-auto inline-flex items-center gap-4 border-b border-violet pb-1 pt-7 text-xs font-semibold text-violet transition-colors hover:border-cyan hover:text-cyan"
               href="#audience"
             >
               Explore target audience <span aria-hidden="true">↗</span>
             </a>
           </div>
           <div
-            className="flex min-h-64 flex-col justify-between border border-white/10 bg-[#111725] p-6 md:p-8"
+            className="flex min-h-64 flex-col justify-between rounded-xl border border-white/10 bg-dark-paper p-6 md:p-8"
             aria-label={`Feature summary: ${selectedFeature.shortTitle}`}
           >
             <div>

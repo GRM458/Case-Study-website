@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap');
 @import "tailwindcss";
 
+
+@font-face{
+	font-family:TimeNewRoman;
+	src:url("./fonts/times.ttf");
+}
+
 @theme {
-	--font-sans: 'DM Sans', sans-serif;
+	/* --font-sans: 'DM Sans', sans-serif; */
+	--font-sans:TimeNewRoman;
 	--font-display: 'DM Serif Display', Georgia, serif;
 	--color-paper: #0b0e17;
 	--color-ink: #f4f6fc;
@@ -17,6 +24,16 @@
 	--color-line: #242c3c;
 	--color-violet: #a958f5;
 	--color-cyan: #35c4f4;
+}
+
+@layer components {
+	.section-title {
+		@apply font-sans text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl;
+	}
+
+	.section-copy {
+		@apply text-base leading-7 md:text-lg md:leading-8;
+	}
 }
 
 @layer base {

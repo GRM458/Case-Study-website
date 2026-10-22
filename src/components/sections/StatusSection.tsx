@@ -1,5 +1,4 @@
 import { marketingFocus, productName } from "../../config/site";
-import { SectionEyebrow } from "../ui/SectionEyebrow";
 
 export function StatusSection() {
   return (
@@ -14,12 +13,12 @@ export function StatusSection() {
         <div>
           <h2
             id="status-heading"
-            className="font-sans text-4xl font-bold leading-[1.08] md:text-5xl lg:text-6xl"
+            className="section-title"
           >
             Designed. Now focused on{" "}
             <span className="text-cyan">reaching schools.</span>
           </h2>
-          <p className="mt-5 text-base leading-7 text-copy">
+          <p className="section-copy mt-5 text-copy">
             According to the provided information, {productName} has already
             been designed. The next focus is marketing the product to schools
             and communicating its practical value.

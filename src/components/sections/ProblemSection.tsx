@@ -1,5 +1,3 @@
-import { SectionEyebrow } from "../ui/SectionEyebrow";
-
 export function ProblemSection() {
   const provides = [
     {
@@ -31,14 +29,14 @@ export function ProblemSection() {
       <div className="mt-9 grid gap-8 lg:grid-cols-[.7fr_1.3fr] lg:gap-20">
         <h2
           id="problem-heading"
-          className="font-sans text-4xl font-bold leading-[1.08] md:text-5xl lg:text-6xl"
+          className="section-title"
         >
           A gap between classroom learning and{" "}
           <span className="bg-linear-to-r from-cyan to-violet bg-clip-text text-transparent">
             parent awareness.
           </span>
         </h2>
-        <div className="space-y-5 text-base leading-8 text-copy md:text-lg">
+        <div className="section-copy space-y-5 text-copy">
           <p>
             Traditional school management and communication methods can create
             gaps between classroom learning and parental awareness.

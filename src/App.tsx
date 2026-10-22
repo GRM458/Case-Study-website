@@ -1,5 +1,6 @@
 
 import { AudienceSection } from './components/sections/AudienceSection'
+import { ClientSection } from './components/sections/ClientSection'
 import { ConclusionSection } from './components/sections/ConclusionSection'
 import { FeaturesSection } from './components/sections/FeaturesSection'
 import { HeroSection } from './components/sections/HeroSection'
@@ -8,7 +9,6 @@ import { ObjectivesSection } from './components/sections/ObjectivesSection'
 import { ProblemSection } from './components/sections/ProblemSection'
 import { SiteFooter } from './components/sections/SiteFooter'
 import { StatusSection } from './components/sections/StatusSection'
-
 function App() {
   return (
     <main className=" bg-paper text-ink">
@@ -20,7 +20,8 @@ function App() {
       <AudienceSection />
       <StatusSection />
       <ConclusionSection />
-      <SiteFooter />
+      <ClientSection/>
+      {/* <SiteFooter /> */}
     </main>
   )
 }

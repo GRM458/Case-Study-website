@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { audiences } from "../../config/site";
-import { SectionEyebrow } from "../ui/SectionEyebrow";
 
 export function AudienceSection() {
   const [activeAudience, setActiveAudience] = useState(0);
@@ -17,11 +16,11 @@ export function AudienceSection() {
         <div>
           <h2
             id="audience-heading"
-            className="font-sans text-4xl font-bold leading-[1.06] md:text-5xl lg:text-6xl"
+            className="section-title"
           >
             Targeted to school communities.
           </h2>
-          <p className="mt-5 text-sm leading-7 text-copy">
+          <p className="section-copy mt-5 text-copy">
             BCCG is primarily designed for schools seeking a digital solution to
             organize educational activities and improve communication with
             parents.
