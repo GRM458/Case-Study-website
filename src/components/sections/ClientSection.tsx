@@ -66,7 +66,7 @@ export function ClientSection() {
           aria-labelledby={`client-tab-${activeClient}`}
         >
           <div className="flex flex-col items-start">
-            <span className="text-[10px] font-bold uppercase tracking-[1.7px] text-cyan">
+            <span className="text-[10px] font-semibold uppercase tracking-[1.7px] text-cyan">
               CLIENT {selectedClient.number}
             </span>
             <h3 className="mt-5 font-sans text-3xl font-semibold leading-tight md:text-4xl">
@@ -88,7 +88,7 @@ export function ClientSection() {
             aria-label={`Client profile: ${selectedClient.shortTitle}`}
           >
             <div>
-              <span className="text-[10px] font-bold uppercase tracking-[1.4px] text-muted">
+              <span className="text-[10px] font-semibold uppercase tracking-[1.4px] text-muted">
                 {productName} / CLIENT PROFILE
               </span>
               <h4 className="mt-5 max-w-md font-sans text-2xl font-semibold leading-snug text-ink">

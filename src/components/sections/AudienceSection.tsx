@@ -57,11 +57,11 @@ export function AudienceSection() {
             id="audience-panel"
             aria-labelledby={`audience-tab-${activeAudience}`}
           >
-            <span className="grid size-11 shrink-0 place-items-center rounded-full border border-violet/50 bg-violet/10 text-xs font-bold text-violet">
+              <span className="grid size-11 shrink-0 place-items-center rounded-full border border-violet/50 bg-violet/10 text-xs font-semibold text-violet">
               {selectedAudience.initials}
             </span>
             <div>
-              <span className="text-[10px] font-bold uppercase tracking-[1.5px] text-muted">
+              <span className="text-[10px] font-semibold uppercase tracking-[1.5px] text-muted">
                 Platform user
               </span>
               <h3 className="mt-2 font-sans text-xl font-semibold">

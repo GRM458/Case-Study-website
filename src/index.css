@@ -8,8 +8,8 @@
 }
 
 @theme {
-	/* --font-sans: 'DM Sans', sans-serif; */
-	--font-sans:TimeNewRoman;
+	--font-sans: 'DM Sans', sans-serif;
+	/* --font-sans:TimeNewRoman; */
 	--font-display: 'DM Serif Display', Georgia, serif;
 	--color-paper: #0b0e17;
 	--color-ink: #f4f6fc;
@@ -28,7 +28,7 @@
 
 @layer components {
 	.section-title {
-		@apply font-sans text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl;
+		@apply font-sans text-4xl font-semibold leading-[1.05] sm:text-5xl lg:text-6xl;
 	}
 
 	.section-copy {
@@ -45,6 +45,8 @@
 		margin: 0;
 		min-width: 320px;
 		font-family: var(--font-sans);
+		/* letter-spacing: 0.01em;
+		word-spacing: 0.025em; */
 	}
 
 	button,

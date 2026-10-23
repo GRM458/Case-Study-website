@@ -39,7 +39,7 @@ export function HeroSection() {
         ].map((node) => <span className={`absolute rounded-full opacity-80 shadow-[0_0_16px_currentColor] ${node.color} ${node.size}`} style={{ left: node.left, top: node.top }} key={`${node.left}-${node.top}`} />)}
         <div className="absolute inset-x-1/4 bottom-[18%] top-[18%] bg-[radial-gradient(ellipse,rgba(53,196,244,.06),transparent_65%)]" />
       </div>
-      <a className="absolute bottom-7 left-6 hidden items-center gap-3 text-[10px] font-bold uppercase tracking-[1.5px] text-muted lg:left-[10vw] lg:flex" href="#introduction"><span className="h-8 w-px bg-cyan" /> Scroll to explore</a> */}
+      <a className="absolute bottom-7 left-6 hidden items-center gap-3 text-[10px] font-semibold uppercase tracking-[1.5px] text-muted lg:left-[10vw] lg:flex" href="#introduction"><span className="h-8 w-px bg-cyan" /> Scroll to explore</a> */}
     </section>
   )
 }

@@ -25,7 +25,7 @@ export function StatusSection() {
           </p>
         </div>
         <div>
-          <h3 className="mb-5 text-xs font-bold uppercase tracking-[1.5px] text-muted">
+          <h3 className="mb-5 text-xs font-semibold uppercase tracking-[1.5px] text-muted">
             Marketing efforts can emphasize
           </h3>
 

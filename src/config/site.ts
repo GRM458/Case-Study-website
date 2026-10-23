@@ -1,4 +1,4 @@
-export const productName = "BCCG";
+export const productName = "LuminfyEdu (E-managment System)";
 
 export const navigation = [
   { label: "Introduction", href: "#introduction" },

@@ -66,7 +66,7 @@ export function FeaturesSection() {
           aria-labelledby={`feature-tab-${activeFeature}`}
         >
           <div className="flex flex-col items-start">
-            <span className="text-[10px] font-bold uppercase tracking-[1.7px] text-cyan">
+            <span className="text-[10px] font-semibold uppercase tracking-[1.7px] text-cyan">
               FEATURE {selectedFeature.number}
             </span>
             <h3 className="mt-5 font-sans text-3xl font-semibold leading-tight md:text-4xl">
@@ -87,7 +87,7 @@ export function FeaturesSection() {
             aria-label={`Feature summary: ${selectedFeature.shortTitle}`}
           >
             <div>
-              <span className="text-[10px] font-bold uppercase tracking-[1.4px] text-muted">
+              <span className="text-[10px] font-semibold uppercase tracking-[1.4px] text-muted">
                 {productName} / KEY FEATURE
               </span>
               <h4 className="mt-5 max-w-md font-sans text-2xl font-semibold leading-snug text-ink">
