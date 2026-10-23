@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { features, productName } from "../../config/site";
+import { SelectableItemTab } from "../ui/SelectableItemTab";
 
 export function FeaturesSection() {
   const [activeFeature, setActiveFeature] = useState(0);
@@ -36,27 +37,15 @@ export function FeaturesSection() {
           aria-orientation="vertical"
         >
           {features.map((feature, index) => (
-            <button
-              className={`group flex min-h-16.25 cursor-pointer items-center gap-4 rounded-lg border-b px-3 text-left text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan ${activeFeature === index ? "border-cyan/30 bg-cyan/10 text-cyan" : "border-line text-copy hover:border-cyan/30 hover:bg-white/5 hover:text-cyan"}`}
+            <SelectableItemTab
+              controls="feature-panel"
               id={`feature-tab-${index}`}
               key={feature.number}
-              type="button"
-              role="tab"
-              aria-selected={activeFeature === index}
-              aria-controls="feature-panel"
-              onClick={() => setActiveFeature(index)}
-            >
-              <span className="w-7 text-[10px] text-muted">
-                {feature.number}
-              </span>
-              <span className="flex-1">{feature.shortTitle}</span>
-              <span
-                className={`text-cyan transition-transform group-hover:translate-x-1 ${activeFeature === index ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}
-                aria-hidden="true"
-              >
-                ↗
-              </span>
-            </button>
+              isSelected={activeFeature === index}
+              number={feature.number}
+              onSelect={() => setActiveFeature(index)}
+              title={feature.shortTitle}
+            />
           ))}
         </div>
         <div
@@ -82,26 +71,11 @@ export function FeaturesSection() {
               Explore target audience <span aria-hidden="true">↗</span>
             </a>
           </div>
-          <div
-            className="flex min-h-64 flex-col justify-between rounded-xl border border-white/10 bg-dark-paper p-6 md:p-8"
-            aria-label={`Feature summary: ${selectedFeature.shortTitle}`}
-          >
-            <div>
-              <span className="text-[10px] font-semibold uppercase tracking-[1.4px] text-muted">
-                {productName} / KEY FEATURE
-              </span>
-              <h4 className="mt-5 max-w-md font-sans text-2xl font-semibold leading-snug text-ink">
-                {selectedFeature.shortTitle}
-              </h4>
-              <p className="mt-4 max-w-lg text-sm leading-7 text-copy">
-                {selectedFeature.description}
-              </p>
-            </div>
-            <div className="mt-8 flex items-center gap-3 border-t border-white/10 pt-4 text-xs text-muted">
-              <span className="size-2 rounded-full bg-cyan" />
-              Part of the integrated school management system
-            </div>
-          </div>
+          <img
+            className="w-full rounded-xl border border-white/10 object-cover"
+            src={selectedFeature.imageUrl}
+            alt={`${productName} feature: ${selectedFeature.shortTitle}`}
+          />
         </div>
       </div>
     </section>

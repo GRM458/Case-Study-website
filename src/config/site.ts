@@ -13,12 +13,16 @@ export const clients = [
     number: "01",
     shortTitle: "Backtawar Cadet College",
     description: "Helps schools record and monitor student attendance.",
+    imageUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd2pfEDriCMxDO56p0wyk1f5GvOgPfE-lWXipqbcB5xg&s=10",
     Link:'https://beta.bccgcms.com'
   },
   {
     number: "02",
     shortTitle: "zyx",
     description: "Helps schools record and monitor student attendance.",
+    imageUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU7m8CIIUJDW7xxrqyyIOXzckPAb14pIgpvy5JK2e7nQ&s=10",
     Link:'https://google.com'
   }
 ];
@@ -28,36 +32,48 @@ export const features = [
     number: "01",
     shortTitle: "Attendance",
     description: "Helps schools record and monitor student attendance.",
+    imageUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzTNSybS95_qPuwTj21Qeo_4gK_9gYziq95OTZ0QBWHg&s=10",
   },
   {
     number: "02",
     shortTitle: "Study planning",
     description:
       "Supports the organization of study plans and learning activities.",
+    imageUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkXd6PJwDD2xlFXpE-PUc-zvzf3_tPjcle3cRjXmLNXA&s=10",
   },
   {
     number: "03",
     shortTitle: "Topic coverage",
     description:
       "Helps parents understand which topics have been covered in the classroom.",
+    imageUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd2pfEDriCMxDO56p0wyk1f5GvOgPfE-lWXipqbcB5xg&s=10",
   },
   {
     number: "04",
     shortTitle: "Performance",
     description:
       "Supports the review of tests and identification of students’ weak academic areas.",
+    imageUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd2pfEDriCMxDO56p0wyk1f5GvOgPfE-lWXipqbcB5xg&s=10",
   },
   {
     number: "05",
     shortTitle: "Role-based management",
     description:
       "Provides separate roles for students, parents, teachers, examination staff, inventory management, and other school-specific requirements.",
+    imageUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd2pfEDriCMxDO56p0wyk1f5GvOgPfE-lWXipqbcB5xg&s=10",
   },
   {
     number: "06",
     shortTitle: "School–parent communication",
     description:
       "Bridges the information gap between schools and parents by making educational progress more visible.",
+    imageUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd2pfEDriCMxDO56p0wyk1f5GvOgPfE-lWXipqbcB5xg&s=10",
   },
 ];
 

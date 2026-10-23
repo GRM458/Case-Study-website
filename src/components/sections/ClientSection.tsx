@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { clients, productName } from "../../config/site";
+import { SelectableItemTab } from "../ui/SelectableItemTab";
 
 export function ClientSection() {
   const [activeClient, setActiveClient] = useState(0);
@@ -36,27 +37,15 @@ export function ClientSection() {
           aria-orientation="vertical"
         >
           {clients.map((client, index) => (
-            <button
-              className={`group flex min-h-16.25 cursor-pointer items-center gap-4 rounded-lg border-b px-3 text-left text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan ${activeClient === index ? "border-cyan/30 bg-cyan/10 text-cyan" : "border-line text-copy hover:border-cyan/30 hover:bg-white/5 hover:text-cyan"}`}
+            <SelectableItemTab
+              controls="client-panel"
               id={`client-tab-${index}`}
               key={client.number}
-              type="button"
-              role="tab"
-              aria-selected={activeClient === index}
-              aria-controls="client-panel"
-              onClick={() => setActiveClient(index)}
-            >
-              <span className="w-7 text-[10px] text-muted">
-                {client.number}
-              </span>
-              <span className="flex-1">{client.shortTitle}</span>
-              <span
-                className={`text-cyan transition-transform group-hover:translate-x-1 ${activeClient === index ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}
-                aria-hidden="true"
-              >
-                ↗
-              </span>
-            </button>
+              isSelected={activeClient === index}
+              number={client.number}
+              onSelect={() => setActiveClient(index)}
+              title={client.shortTitle}
+            />
           ))}
         </div>
         <div
@@ -83,29 +72,14 @@ export function ClientSection() {
               Visite<span aria-hidden="true">↗</span>
             </a>
           </div>
-          <div
-            className="flex min-h-64 flex-col justify-between rounded-xl border border-white/10 bg-dark-paper p-6 md:p-8"
-            aria-label={`Client profile: ${selectedClient.shortTitle}`}
-          >
-            <div>
-              <span className="text-[10px] font-semibold uppercase tracking-[1.4px] text-muted">
-                {productName} / CLIENT PROFILE
-              </span>
-              <h4 className="mt-5 max-w-md font-sans text-2xl font-semibold leading-snug text-ink">
-                {selectedClient.shortTitle}
-              </h4>
-              <p className="mt-4 max-w-lg text-sm leading-7 text-copy">
-                {selectedClient.description}
-              </p>
-            </div>
-            <div className="mt-8 flex items-center gap-3 border-t border-white/10 pt-4 text-xs text-muted">
-              <span className="size-2 rounded-full bg-cyan" />
-              School client featured in this case study
-            </div>
-          </div>
+          <img
+            className="w-full rounded-xl border border-white/10 object-cover"
+            src={selectedClient.imageUrl}
+            alt={`${productName} client: ${selectedClient.shortTitle}`}
+          />
         </div>
       </div>
-
+{/* h-64 removed form image */}
 
     </section>
   );
