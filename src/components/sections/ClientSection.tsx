@@ -19,14 +19,14 @@ export function ClientSection() {
             id="client-heading"
             className="section-title mt-8"
           >
-            The client behind
+            Schools that trust us
             <br />
-            <span className="text-cyan">the case study.</span>
+            <span className="text-cyan">using LuminfyEdu.</span>
           </h2>
         </div>
         <p className="section-copy text-copy">
-          This section highlights the school client and the information
-          provided about its use of {productName}.
+          See how schools use {productName} to manage daily tasks, support
+          student progress, and keep parents informed.
         </p>
       </div>
 
