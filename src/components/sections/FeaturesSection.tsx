@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { features, productName } from "../../config/site";
+import { ImageGallery } from "../ui/ImageGallery";
 import { SelectableItemTab } from "../ui/SelectableItemTab";
 
 export function FeaturesSection() {
@@ -8,11 +9,11 @@ export function FeaturesSection() {
 
   return (
     <section
-      className="bg-paper px-6 py-20 text-ink md:px-12 md:py-28 lg:px-[12vw] lg:py-32"
+      className="bg-paper px-6 py-14 text-ink md:px-12 md:py-18 lg:px-[12vw] lg:py-22"
       id="features"
       aria-labelledby="feature-heading"
     >
-      <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+      <div className="grid gap-8 md:grid-cols-2 md:items-end md:gap-12">
         <div>
           {/* <SectionEyebrow number="04" label="Key features" inverted /> */}
           <h2
@@ -24,7 +25,7 @@ export function FeaturesSection() {
             <span className="text-cyan">organized in one place.</span>
           </h2>
         </div>
-        <p className="section-copy max-w-85 pb-1 text-copy">
+        <p className="section-copy text-copy">
           The platform’s key features support attendance, study planning,
           classroom updates, assessment review, and school-parent communication.
         </p>
@@ -49,7 +50,7 @@ export function FeaturesSection() {
           ))}
         </div>
         <div
-          className="grid gap-9 py-8 lg:grid-cols-[.9fr_1.1fr] lg:gap-12 lg:py-10 lg:pl-12"
+          className="grid gap-9 py-8 lg:grid-cols-2 lg:gap-12 lg:py-10 lg:pl-12"
           role="tabpanel"
           id="feature-panel"
           aria-labelledby={`feature-tab-${activeFeature}`}
@@ -71,9 +72,9 @@ export function FeaturesSection() {
               Explore target audience <span aria-hidden="true">↗</span>
             </a>
           </div>
-          <img
-            className="w-full rounded-xl border border-white/10 object-cover"
-            src={selectedFeature.imageUrl}
+          <ImageGallery
+            key={selectedFeature.number}
+            imageUrl={selectedFeature.imageUrl}
             alt={`${productName} feature: ${selectedFeature.shortTitle}`}
           />
         </div>

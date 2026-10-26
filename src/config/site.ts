@@ -1,4 +1,16 @@
 export const productName = "LuminfyEdu (E-managment System)";
+import  AttendenceImg from '../images/Attendence.jpg'
+import  StudyPlanImg from '../images/StudyPlan.jpg'
+import TopicsCover from '../images/TopicCoverege.jpg'
+import progressImg from '../images/progress.jpg';
+import SuperAdmin from '../images/SuperAdminRole.jpg'
+import Parent from '../images/ParentRole.jpg'
+import student from '../images/studentRole.jpg'
+
+
+
+
+type ImageSource = string | string[];
 
 export const navigation = [
   { label: "Introduction", href: "#introduction" },
@@ -8,64 +20,66 @@ export const navigation = [
   { label: "Audience", href: "#audience" },
 ];
 
-export const clients = [
+export const clients: {
+  number: string;
+  shortTitle: string;
+  description: string;
+  imageUrl: ImageSource;
+  Link: string;
+}[] = [
   {
     number: "01",
     shortTitle: "Backtawar Cadet College",
-    description: "Helps schools record and monitor student attendance.",
+    description:
+      "Backtawar Cadet College uses LuminfyEdu to support attendance tracking, study planning, classroom updates, student performance monitoring, and communication between the school and parents.",
     imageUrl:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd2pfEDriCMxDO56p0wyk1f5GvOgPfE-lWXipqbcB5xg&s=10",
     Link:'https://beta.bccgcms.com'
   },
-  {
-    number: "02",
-    shortTitle: "zyx",
-    description: "Helps schools record and monitor student attendance.",
-    imageUrl:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU7m8CIIUJDW7xxrqyyIOXzckPAb14pIgpvy5JK2e7nQ&s=10",
-    Link:'https://google.com'
-  }
 ];
 
-export const features = [
+
+
+
+export const features: {
+  number: string;
+  shortTitle: string;
+  description: string;
+  imageUrl: ImageSource;
+}[] = [
   {
     number: "01",
     shortTitle: "Attendance",
     description: "Helps schools record and monitor student attendance.",
-    imageUrl:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzTNSybS95_qPuwTj21Qeo_4gK_9gYziq95OTZ0QBWHg&s=10",
+    imageUrl:AttendenceImg,
   },
   {
     number: "02",
     shortTitle: "Study planning",
     description:
-      "Supports the organization of study plans and learning activities.",
-    imageUrl:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkXd6PJwDD2xlFXpE-PUc-zvzf3_tPjcle3cRjXmLNXA&s=10",
+      "Supports the organization of study plans and learning activities.", 
+    imageUrl:StudyPlanImg
   },
   {
     number: "03",
     shortTitle: "Topic coverage",
     description:
       "Helps parents understand which topics have been covered in the classroom.",
-    imageUrl:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd2pfEDriCMxDO56p0wyk1f5GvOgPfE-lWXipqbcB5xg&s=10",
+    imageUrl:TopicsCover,
   },
   {
     number: "04",
-    shortTitle: "Performance",
+    shortTitle: "progress",
     description:
       "Supports the review of tests and identification of students’ weak academic areas.",
-    imageUrl:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd2pfEDriCMxDO56p0wyk1f5GvOgPfE-lWXipqbcB5xg&s=10",
+    imageUrl:progressImg,
   },
   {
     number: "05",
     shortTitle: "Role-based management",
     description:
       "Provides separate roles for students, parents, teachers, examination staff, inventory management, and other school-specific requirements.",
-    imageUrl:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd2pfEDriCMxDO56p0wyk1f5GvOgPfE-lWXipqbcB5xg&s=10",
+    imageUrl:[student,Parent,SuperAdmin]
   },
   {
     number: "06",
@@ -73,7 +87,7 @@ export const features = [
     description:
       "Bridges the information gap between schools and parents by making educational progress more visible.",
     imageUrl:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd2pfEDriCMxDO56p0wyk1f5GvOgPfE-lWXipqbcB5xg&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaIlSPwDFzVZgy04dXrBpxSBsVGq7nfLzhm3Z4z00IWpXluZoHs5CK5v7-&s=10",
   },
 ];
 

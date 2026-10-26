@@ -7,12 +7,12 @@ export function AudienceSection() {
 
   return (
     <section
-      className="border-y border-white/5 bg-[radial-gradient(ellipse_at_20%_50%,rgba(35,106,139,.13),transparent_45%)] px-6 py-20 md:px-12 md:py-28 lg:px-[12vw] lg:py-32"
+      className="border-y border-white/5 bg-[radial-gradient(ellipse_at_20%_50%,rgba(35,106,139,.13),transparent_45%)] px-6 py-14 md:px-12 md:py-18 lg:px-[12vw] lg:py-22"
       id="audience"
       aria-labelledby="audience-heading"
     >
       {/* <SectionEyebrow number="05" label="Target audience" /> */}
-      <div className="mt-8 grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:gap-20">
+      <div className="mt-8 grid gap-8 lg:grid-cols-2 lg:gap-16">
         <div>
           <h2
             id="audience-heading"

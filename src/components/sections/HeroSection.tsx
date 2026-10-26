@@ -3,9 +3,9 @@ import { ButtonLink } from '../ui/ButtonLink'
 
 export function HeroSection() {
   return (
-    <section className="relative grid min-h-[calc(100svh-76px)] grid-cols-1 items-center px-6 pb-20 pt-14 md:px-12 md:pt-20 lg:px-[10vw] lg:pb-24 lg:pt-16" id="home" aria-labelledby="hero-title">
+    <section className="relative grid min-h-[calc(100svh)] grid-cols-1 items-center px-6 pb-20 pt-14 md:px-12 md:pt-20 lg:px-[10vw] lg:pb-24 lg:pt-16" id="home" aria-labelledby="hero-title">
       <div className="relative z-10 w-full max-w-6xl">
-        <p className="mb-7 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[.03] px-4 py-2.5 text-[11px] font-semibold uppercase tracking-[1.1px] text-cyan"><span aria-hidden="true">✣</span> Integrated school management</p>
+        <p className="mb-7 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[.03] px-4 py-2.5 text-[11px] font-semibold uppercase tracking-[1.1px] text-cyan"><span aria-hidden="true">✣</span> ERP-Based school management </p>
         <h1 id="hero-title" className="section-title max-w-5xl">ERP-based school management for <span className="bg-linear-to-r from-cyan via-[#6589f5] to-violet bg-clip-text text-transparent">better-connected schools.</span></h1>
         <p className="section-copy mt-7 max-w-2xl text-copy">{productName} helps schools manage educational activities, monitor student performance, and improve communication between teachers, students, and parents.</p>
         <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-4">

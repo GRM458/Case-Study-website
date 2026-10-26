@@ -20,13 +20,13 @@ export function ProblemSection() {
 
   return (
     <section
-      className="px-6 py-20 md:px-12 md:py-28 lg:px-[12vw] lg:py-32"
+      className="px-6 py-14 md:px-12 md:py-18 lg:px-[12vw] lg:py-22"
       id="problem"
       aria-labelledby="problem-heading"
     >
       {/* <SectionEyebrow number="02" label="Problem statement" /> */}
 
-      <div className="mt-9 grid gap-8 lg:grid-cols-[.7fr_1.3fr] lg:gap-20">
+      <div className="mt-9 grid gap-8 lg:grid-cols-2 lg:gap-16">
         <h2
           id="problem-heading"
           className="section-title"

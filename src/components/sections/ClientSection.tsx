@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { clients, productName } from "../../config/site";
+import { ImageGallery } from "../ui/ImageGallery";
 import { SelectableItemTab } from "../ui/SelectableItemTab";
 
 export function ClientSection() {
@@ -8,11 +9,11 @@ export function ClientSection() {
 
   return (
     <section
-      className="bg-paper px-6 py-20 text-ink md:px-12 md:py-28 lg:px-[12vw] lg:py-32"
+      className="bg-paper px-6 py-14 text-ink md:px-12 md:py-18 lg:px-[12vw] lg:py-22"
       id="clients"
       aria-labelledby="client-heading"
     >
-      <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+      <div className="grid gap-8 md:grid-cols-2 md:items-end md:gap-12">
         <div>
           <h2
             id="client-heading"
@@ -23,7 +24,7 @@ export function ClientSection() {
             <span className="text-cyan">the case study.</span>
           </h2>
         </div>
-        <p className="section-copy max-w-85 pb-1 text-copy">
+        <p className="section-copy text-copy">
           This section highlights the school client and the information
           provided about its use of {productName}.
         </p>
@@ -49,7 +50,7 @@ export function ClientSection() {
           ))}
         </div>
         <div
-          className="grid gap-9 py-8 lg:grid-cols-[.9fr_1.1fr] lg:gap-12 lg:py-10 lg:pl-12"
+          className="grid gap-9 py-8 lg:grid-cols-2 lg:gap-12 lg:py-10 lg:pl-12"
           role="tabpanel"
           id="client-panel"
           aria-labelledby={`client-tab-${activeClient}`}
@@ -72,9 +73,9 @@ export function ClientSection() {
               Visite<span aria-hidden="true">↗</span>
             </a>
           </div>
-          <img
-            className="w-full rounded-xl border border-white/10 object-cover"
-            src={selectedClient.imageUrl}
+          <ImageGallery
+            key={selectedClient.number}
+            imageUrl={selectedClient.imageUrl}
             alt={`${productName} client: ${selectedClient.shortTitle}`}
           />
         </div>

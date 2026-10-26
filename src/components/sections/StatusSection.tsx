@@ -3,13 +3,13 @@ import { marketingFocus, productName } from "../../config/site";
 export function StatusSection() {
   return (
     <section
-      className="px-6 py-20 md:px-12 md:py-28 lg:px-[12vw] lg:py-32"
+      className="px-6 py-14 md:px-12 md:py-18 lg:px-[12vw] lg:py-22"
       id="status"
       aria-labelledby="status-heading"
     >
       {/* <SectionEyebrow number="06" label="Current status & marketing focus" /> */}
 
-      <div className="mt-9 grid gap-10 lg:grid-cols-[.85fr_1.15fr] lg:gap-20">
+      <div className="mt-9 grid gap-10 lg:grid-cols-2 lg:gap-16">
         <div>
           <h2
             id="status-heading"
